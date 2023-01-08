@@ -9,6 +9,7 @@ pub mod custom_dbus;
 pub mod disk_space;
 pub mod docker;
 pub mod focused_window;
+pub mod gdq;
 pub mod github;
 pub mod hueshift;
 pub mod ibus;
@@ -50,6 +51,7 @@ use self::custom_dbus::*;
 use self::disk_space::*;
 use self::docker::*;
 use self::focused_window::*;
+use self::gdq::*;
 use self::github::*;
 use self::hueshift::*;
 use self::ibus::*;
@@ -229,6 +231,7 @@ pub fn create_block(
         "custom_dbus" => block!(CustomDBus, id, block_config, shared_config, update_request),
         "disk_space" => block!(DiskSpace, id, block_config, shared_config, update_request),
         "docker" => block!(Docker, id, block_config, shared_config, update_request), ///////
+        "gdq" => block!(GDQ, id, block_config, shared_config, update_request),       ///////
         "focused_window" => block!(
             FocusedWindow,
             id,
